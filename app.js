@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
       software: req.headers['user-agent'].match(/\((.*?)\)/)[1]
     }))  
   } else {
-    res.writeHead(404)
+    res.statusCode(404)
     res.end()
   }
 })
